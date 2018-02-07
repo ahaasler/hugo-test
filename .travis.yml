@@ -1,0 +1,10 @@
+language: generic
+before_install:
+- mkdir -p ~/bin
+- export PATH=$PATH:$HOME/bin
+install:
+- curl -skL https://github.com/gohugoio/hugo/releases/download/v0.35/hugo_0.35_Linux-64bit.tar.gz | tar -xz -C ~/bin
+before_script: hugo version
+script: hugo
+branches:
+  except: gh-pages
