@@ -8,3 +8,14 @@ before_script: hugo version
 script: hugo
 branches:
   except: gh-pages
+deploy:
+  provider: pages
+  skip_cleanup: true
+  local_dir: public
+  keep_history: true
+  name: Adrian Haasler García
+  email: dev@adrianhaasler.com
+  github_token:
+    secure: oaMO8x3B45Fnan2SmWvIxfnYY4sda45sVY2TgUvhif5qR1zJi230oS82E5HRmurSl3ss1pt6uW4519ShzounZ1X2kvKSv3/+qnIPfX+kKPQRBJUEDcEuzExjkkRJI+FS48T+IvWLjp/8tgw3c21G9qUQPuLXPX8L93qlGicT12v7vkkMAKz/p5mCi+k5n/haMtb75YZVvhqvhHCg6DdI4uIFGv0FUmd+SAriaAz3z3+KJJD11waevdnu7RlyGh81saGo3jI3p/tgWQgBlL6jDe5Pxj9vpf/JME29GQOC8VggDBnVHJRNztsSpoBzS7tuNhkxGArkb4e4uMWEWvINUHGcpYcanRLUGgV/qsWrfgMil0qOQQ3QpGebr5a/3da9m8SW9Vavg5VxSvAZFSu+1sjmraUkX6J/r2dASm4aU03bnxPkGB8RdrVDQ4NtG5b4VAe+J07AeVJM/58HUOyWzR8qj7JkIzOTCTMYJwdMq7CpttfsWszdfLcmA4+D8eArQgMGpF+J7hHG+pIynVB43nugb9AO1MK8oWJPosrUGt2In4WePWkudi7YnW2sSe5JTGqGnkSQzbn8SgEcr5AKuw/D2WwLZK8/9Mw4Yhb+NtwnBX4p1wiPtpi+Nf++/odwSGYeocg1pz4fQhvkNLSei1esvrGpNrrYprX6RiPz8Vk=
+  on:
+    branch: master
